@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  background: white;
+}
+
+header {
+  width: 100%;
+}
+
+.img_evangel {
+  text-align: center;
+}
+
+.eva_logo {
+  height: 5vh;
+}
+
+/* Edicion del navegador principal */
+.navegador {
+  width: 100%;
+  margin: 0px auto;
+  position: fixed;
+  font-size: x-large;
+  z-index: 30;
+}
+
+/* Efectos para el menu dentro del navegador */
+.navegador ul {
+  list-style: none;
+}
+
+.menu li a:hover {
+  color: #CE7D35;
+  transition: all 0.3s;
+}
+
+/* Edicion del span */
+.linea {
+  background: white;
+  height: 17vh;
+  width: 100%;
+  display: block;
+}
+
+/* Modificaciones para las imagenes del Index */
+.principal {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  width: 95%;
+  margin: auto;
+  grid-gap: 10px;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+/* Modificaciones para las imagenes */
+.img_principal img {
+  width: 100%;
+  vertical-align: top;
+  height: 700px;
+  object-fit: cover;
+}
+
+.img_principal a {
+  display: block;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Modificaciones para las letras en "Galeria" */
+.galeria h1 {
+  color: black;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Modificacion de las imagenes en "Galeria" */
+.galeria_grid {
+  display: grid;
+  width: 95%;
+  margin: auto;
+  grid-gap: 10px;
+  padding: 40px 0;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.galeria img {
+  width: 80%;
+  height: 350px;
+  margin: 20px;
+  display: inline-block;
+  margin: auto;
+  object-fit: cover;
+  box-shadow: 0 0 6px rgb(0, 0, 0);
+}
+
+/* Modificaciones para las letras y el mapa */
+.principal_mapa {
+  display: grid;
+  width: 95%;
+  margin: auto;
+  grid-gap: 10px;
+  padding: 40px 0;
+  overflow: hidden;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.mapa {
+  text-align: right;
+}
+
+.txt_sucursal {
+  display: block;
+  text-align: left;
+  color: black;
+  font-size: x-large;
+}
+
+/* Modificaciones para el formulario en "Contacto" */
+.mensaje {
+  text-align: center;
+}
+
+form {
+  width: 700px;
+  margin: auto;
+}
+
+input {
+  margin: 15px;
+  padding: 20px;
+  width: 660px;
+}
+
+textarea {
+  margin: 15px;
+  padding: 50px;
+  width: 660px;
+}
+
+/* Cambios para la imagen de talles */
+.guia_talles {
+  width: 75vw;
+  max-width: 1000px;
+  min-width: 320px;
+  margin: auto;
+}
+
+.talles_img {
+  width: 100%;
+  box-shadow: 0px 3px 5px rgba(15, 15, 15, 0.5);
+}
+
+/* Modificacion para el carusel */
+.carrusel {
+  width: 35%;
+  margin: auto;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.img_carusel {
+  width: 80%;
+  height: 35%;
+  object-fit: cover;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/*estilo para el boton*/
+.boton {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
+/*# sourceMappingURL=styles.css.map */

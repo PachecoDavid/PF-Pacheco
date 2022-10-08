@@ -1,3 +1,50 @@
+//Mixins
+@mixin separador {
+    background: white;
+    height: 17vh;
+    width: 100%;
+    display: block;
+}
+
+@mixin img {
+    width: 100%;
+    vertical-align: top;
+    height: 700px;
+    object-fit: cover;
+}
+
+@mixin img_index {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+@mixin img_galeria {
+    width: 80%;
+height: 350px;
+margin: 20px;
+display: inline-block;
+margin: auto;
+object-fit: cover;
+box-shadow: 0 0 6px rgb(0, 0, 0);
+    
+}
+@mixin grid_tamañano {
+    display: grid;
+    width: 95%;
+    margin: auto;
+    grid-gap: 10px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+//Variables
+$sombra: 0 0 6px rgba(0, 0, 0, 0.5);
+
+
 *{
     margin: 0;
 	padding: 0;
@@ -26,7 +73,7 @@ header{
     height: 5vh;
 }
 
-/* Ediciond del navegador principal */
+/* Edicion del navegador principal */
 .navegador{
     
 
@@ -52,32 +99,20 @@ header{
 }
 /* Edicion del span */
 .linea{
-    background: white;
-    height: 17vh;
-    width: 100%;
-    display: block;
+    @include separador();
     
 }
 
 /* Modificaciones para las imagenes del Index */
 .principal{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    width: 95%;
-    margin: auto;
-    grid-gap: 10px;
-    padding: 40px 0;
-    overflow: hidden;
+  @include img_index();
    
 }
 
 /* Modificaciones para las imagenes */
 
 .img_principal img{
-    width: 100%;
-    vertical-align: top;
-    height: 700px;
-    object-fit: cover;
+   @include img();
     
     
     
@@ -86,7 +121,7 @@ header{
 .img_principal a{
     display: block;
     overflow: hidden;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    box-shadow: $sombra;
 }
 
 
@@ -94,40 +129,26 @@ header{
 /* Modificaciones para las letras en "Galeria" */
 .galeria h1{
    color: black;
-    text-shadow: 0 0 6px rgba(0, 0, 0, 0.575);
+    text-shadow: $sombra;
 }
 
 
 /* Modificacion de las imagenes en "Galeria" */
 
 .galeria_grid{
-    display: grid;
+    @include grid_tamañano();
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    width: 95%;
-    margin: auto;
-    grid-gap: 10px;
-    padding: 40px 0;
-    overflow: hidden;
+    
 }
 
 .galeria img{
-width: 80%;
-height: 350px;
-margin: 20px;
-display: inline-block;
-margin: auto;
-object-fit: cover;
-box-shadow: 0 0 6px rgb(0, 0, 0);
+@include img_galeria();
 }
 /* Modificaciones para las letras y el mapa */
 .principal_mapa{
-    display: grid;
-    grid-template-columns: repeat(2, minmax(450px, 1fr));
-    width: 95%;
-    margin: auto;
-    grid-gap: 10px;
-    padding: 40px 0;
-    overflow: hidden;
+   @include grid_tamañano();
+   grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+   
 
 }
 .mapa{
@@ -184,7 +205,7 @@ textarea{
 
     width: 35%;
     margin: auto;
-    box-shadow: 0 0 6px rgb(0, 0, 0);
+    box-shadow: $sombra;
 }
 
 
@@ -192,7 +213,7 @@ textarea{
     width: 80%;
     height: 35%;
     object-fit: cover;
-    box-shadow: 0 0 6px rgb(0, 0, 0);
+    box-shadow: $sombra;
 }
 
 
